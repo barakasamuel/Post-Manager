@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post Pulse</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <h1>Post Pulse</h1>
+  <p>Modern blog post management</p>
+
+  <div class="container">
+    <div class="posts-panel">
+      <h2>Blog Posts</h2>
+      <ul id="post-list"></ul>
+
+      <h3>Add New Post</h3>
+      <form id="create-form">
+        <input type="text" id="new-title" placeholder="Title" required />
+        <input type="text" id="new-author" placeholder="Author" required />
+        <input type="text" id="new-image" placeholder="Image URL (optional)" />
+        <textarea id="new-content" placeholder="Content" required></textarea>
+        <button type="submit">Add Post</button>
+      </form>
+    </div>
+
+    <div class="post-detail">
+      <h3 id="detail-title">Select a post</h3>
+      <p id="detail-meta"></p>
+      <img id="detail-image" src="https://via.placeholder.com/500x200?text=No+Post+Selected" alt="Post Image" />
+      <p id="detail-content">Post content will appear here.</p>
+
+      <h3>Edit Selected Post</h3>
+      <form id="edit-form">
+        <input type="text" id="edit-title" placeholder="Edit Title" required />
+        <textarea id="edit-content" placeholder="Edit Content" required></textarea>
+        <button type="submit">Update Post</button>
+        <button type="button" onclick="deletePost()">Delete Post</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="./src/index.js"></script>
+</body>
+</html>
